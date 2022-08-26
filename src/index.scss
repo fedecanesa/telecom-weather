@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 *:before,
 *:after {
@@ -30,15 +32,11 @@ body {
     margin: 0;
     display: flex;
     place-items: center;
+    justify-content: center;
     min-width: 100vw;
     min-height: 100vh;
     font-size: 1.4rem;
     -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-    font-size: 3.2em;
-    line-height: 1.1;
 }
 
 /* button {
