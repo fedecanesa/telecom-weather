@@ -1,0 +1,84 @@
+.currentweather {
+    margin-top: 40px;
+    .currentweather__location {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 10px auto;
+        p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    }
+    .currentweather__date {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 10px auto;
+        p {
+            height: max-content;
+            font-size: 1rem;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+        }
+    }
+    .currentweather__details {
+        margin-top: 20px;
+        .currentweather__details--description {
+            margin-top: 40px;
+            text-transform: capitalize;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .currentweather__details--temperature {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+
+            .details__temperature--main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+            .details__temperature--others {
+                font-size: 1rem;
+                .temperature__others--container {
+                    display: flex;
+                    align-items: center;
+
+                    .others_container--icon {
+                        margin-right: 10px;
+                    }
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .currentweather__details--others {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 60px 10px;
+            justify-content: space-around;
+            font-size: 1rem;
+            .details__others--container {
+                display: flex;
+                p {
+                    display: flex;
+                    align-items: center;
+                }
+                span {
+                    margin-left: 10px;
+                }
+                .others_container--icon {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
