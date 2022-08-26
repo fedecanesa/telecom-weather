@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+.title {
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    transition: all ease 2s;
+    &:hover {
+        color: $brand-primary-dark;
+    }
+}
