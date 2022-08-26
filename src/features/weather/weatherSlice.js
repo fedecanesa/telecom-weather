@@ -3,30 +3,43 @@ import { createSlice } from '@reduxjs/toolkit';
 const weatherSlice = createSlice({
     name: 'weather',
     initialState: {
-        isLoading: false,
+        isLoadingWeather: false,
         error: '',
-        weather: {},
-        filterStatus: '',
+        weather: [],
+        forecast: [],
+        unit: 'metric',
     },
     reducers: {
-        fail: (state, { payload }) => {
-            state.isLoading = false;
+        weatherFail: (state, { payload }) => {
+            state.isLoadingWeather = false;
             state.error = payload;
             state.weather = {};
         },
-        pending: state => {
-            state.isLoading = true;
+        weatherPending: state => {
+            state.isLoadingWeather = true;
         },
-        success: (state, { payload }) => {
-            state.isLoading = false;
+        weatherSuccess: (state, { payload }) => {
+            state.isLoadingWeather = false;
             state.error = '';
-            state.weather = payload;
+            state.weather = [payload];
         },
-        updateFilter: (state, { payload }) => {
-            state.filterStatus = payload;
+        handleForecast: (state, { payload }) => {
+            state.isLoadingWeather = false;
+            state.error = '';
+            state.forecast = payload;
+        },
+        updateUnit: (state, { payload }) => {
+            state.unit = payload;
         },
     },
 });
 
-export const { fail, pending, success, updateFilter } = weatherSlice.actions;
+export const {
+    weatherFail,
+    weatherPending,
+    weatherSuccess,
+    handleForecast,
+    updateCity,
+    updateUnit,
+} = weatherSlice.actions;
 export default weatherSlice.reducer;
