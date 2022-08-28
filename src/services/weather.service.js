@@ -4,30 +4,30 @@ import axios from 'axios';
 
 export const getLocalWeather = location => {
     return api.get(
-        `/weather?q=${location}&units=metric&appid=${config.API_KEY}`,
+        `/weather?q=${location}&units=metric&appid=${config.VITE_API_KEY}`,
     );
 };
 
 export const getWeather = (lat, long) => {
     return api.get(
-        `/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${config.API_KEY}`,
+        `/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${config.VITE_API_KEY}`,
     );
 };
 
 export const getForecast = (lat, long) => {
     return api.get(
-        `/forecast/?lat=${lat}&lon=${long}&units=metric&APPID=${config.API_KEY}`,
+        `/forecast/?lat=${lat}&lon=${long}&units=metric&APPID=${config.VITE_API_KEY}`,
     );
 };
 
 export const getWeatherByCity = city => {
     const options = {
         method: 'GET',
-        url: 'https://api.openweathermap.org/data/2.5/weather',
+        url: `${config.VITE_API_URL_BASE}/weather`,
         params: {
             q: city,
             units: 'metric',
-            appid: config.API_KEY,
+            appid: config.VITE_API_KEY,
         },
     };
     return axios
