@@ -1,11 +1,10 @@
 @import '../../styles/variables.scss';
 
 .layout {
-    display: flex;
-    justify-content: center;
-
-    padding: 3rem;
     background-color: $black-background;
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    padding: 3rem;
     width: 100vw;
 }

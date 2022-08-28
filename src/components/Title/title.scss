@@ -1,11 +1,20 @@
 @import '../../styles/variables.scss';
 .title {
+    font-size: 2rem;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 5px;
+    line-height: 1;
     text-transform: uppercase;
     transition: all ease 2s;
+    width: max-content;
     &:hover {
         color: $brand-primary-dark;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: 700px) {
+        margin: 0 auto;
     }
 }

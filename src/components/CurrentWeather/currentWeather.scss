@@ -1,82 +1,168 @@
+@import '../../styles/variables.scss';
 .currentweather {
     margin-top: 40px;
+    transition: 2s ease;
+    width: 100%;
     .currentweather__location {
         display: flex;
-        width: 100%;
         justify-content: center;
         margin: 10px auto;
+        width: 100%;
         p {
             font-size: 1.5rem;
             font-weight: 600;
             letter-spacing: 2px;
         }
     }
+    .currentweather__temperature {
+        display: flex;
+        justify-content: center;
+        margin: 60px auto;
+        width: 100%;
+        p {
+            font-size: 5rem;
+            font-weight: 600;
+        }
+    }
+    .currentweather__description {
+        display: flex;
+        justify-content: center;
+        line-height: 1;
+        margin: 60px auto;
+        text-align: center;
+        width: 80%;
+        p {
+            font-size: 3rem;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+    }
+    .currentweather__button--details {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        transition: 1s ease;
+        width: 100%;
+    }
+    button {
+        background-color: $brand-telecom;
+        border: none;
+        border-radius: 20px;
+        color: $white-color;
+        font-size: 1rem;
+        font-weight: 500;
+        height: 40px;
+        letter-spacing: 2px;
+        transition: 2s ease;
+        width: 160px;
+        &:hover {
+            background-color: $white-color;
+            color: $brand-telecom;
+            transition: 1s ease;
+        }
+    }
     .currentweather__date {
         display: flex;
-        width: 100%;
         justify-content: center;
         margin: 10px auto;
+        width: 100%;
         p {
-            height: max-content;
             font-size: 1rem;
-            text-transform: capitalize;
+            height: max-content;
             letter-spacing: 2px;
+            text-transform: capitalize;
         }
     }
     .currentweather__details {
-        margin-top: 20px;
+        background-color: $white-color;
+        border-radius: 20px;
+        color: $black;
+        padding-top: 20px;
+        transition: 2s ease;
         .currentweather__details--description {
+            display: flex;
+            justify-content: center;
             margin-top: 40px;
             text-transform: capitalize;
             width: 100%;
-            display: flex;
-            justify-content: center;
         }
         .currentweather__details--temperature {
-            margin-top: 30px;
             display: flex;
             justify-content: space-around;
+            padding: 30px 0;
 
             .details__temperature--main {
-                display: flex;
-                justify-content: center;
                 align-items: center;
+                display: flex;
                 font-size: 3rem;
                 font-weight: 600;
+                justify-content: center;
             }
             .details__temperature--others {
+                color: $gray-dark;
+                display: grid;
                 font-size: 1rem;
+                gap: 20px;
+                grid-template-columns: repeat(4, 1fr);
                 .temperature__others--container {
-                    display: flex;
                     align-items: center;
+                    background-color: $white-color-background;
+                    border-radius: 20px;
+                    color: $gray-normal;
 
+                    display: flex;
+                    flex-direction: column;
+                    height: 120px;
+                    padding: 20px 3%;
+                    width: 130px;
+                    &:hover {
+                        transform: scale(1.02);
+                    }
                     .others_container--icon {
-                        margin-right: 10px;
+                        margin-right: 8px;
                     }
                     span {
-                        margin-left: 10px;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        margin-top: 20px;
+                    }
+                    .others__container--title {
+                        align-items: center;
+                        color: $brand-telecom;
+                        display: flex;
+                        font-weight: 600;
+                        justify-content: center;
+                        width: 100%;
                     }
                 }
             }
         }
-        .currentweather__details--others {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 60px 10px;
-            justify-content: space-around;
-            font-size: 1rem;
-            .details__others--container {
-                display: flex;
-                p {
-                    display: flex;
-                    align-items: center;
-                }
-                span {
-                    margin-left: 10px;
-                }
-                .others_container--icon {
-                    margin: 0 5px;
+    }
+}
+
+@media (max-width: 900px) {
+    .currentweather {
+        .currentweather__details {
+            .currentweather__details--temperature {
+                width: 100%;
+                .details__temperature--others {
+                    grid-template-columns: repeat(1, 1fr);
+                    transition: 1s ease;
+                    width: 70%;
+                    .temperature__others--container {
+                        align-items: center;
+                        display: flex;
+                        flex-direction: row;
+                        height: 60px;
+                        justify-content: space-around;
+                        width: 100%;
+                        .others__container--title {
+                            width: 50%;
+                        }
+                        span {
+                            margin-top: 0;
+                        }
+                    }
                 }
             }
         }
