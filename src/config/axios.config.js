@@ -1,5 +1,6 @@
 import axios from 'axios';
+import config from './config';
 
 export default axios.create({
-    baseURL: 'https://api.openweathermap.org/data/2.5',
+    baseURL: config.VITE_API_URL_BASE,
 });

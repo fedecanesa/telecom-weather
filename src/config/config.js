@@ -1,7 +1,5 @@
-import dotenv from 'dotenv';
-
 const config = {
-    API_KEY: '5ff1f2fb10a9c8dbba1b850dae23bd8b',
+    VITE_API_KEY: import.meta.env.VITE_API_KEY,
+    VITE_API_URL_BASE: import.meta.env.VITE_API_URL_BASE,
 };
-
 export default config;
