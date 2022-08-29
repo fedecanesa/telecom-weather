@@ -5,7 +5,7 @@ Challenge for "Telecom - Flow". When entering the application, it identifies the
 ## Installation
 
 ```
-Install npm dependencies: `npm install or yarn install`
+Install npm dependencies: `npm install`
 ```
 
 ## App Configuration
