@@ -17,7 +17,7 @@ Get Your OpenWeatherMap API KEY here: https://home.openweathermap.org/api_keys
 -   Create `.env` file in root of the project.
 -   Copy the variable from [sample.env](https://github.com/fedecanesa/telecom-weather/blob/main/sample.env) and paste it into `.env`
 -   Change the desired value. _eg_ API Key
--   Run app: `npm start or yarn start`
+-   Run app: `npm run dev`
 
 ### Build with
 
