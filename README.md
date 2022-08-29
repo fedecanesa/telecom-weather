@@ -2,14 +2,6 @@
 
 Challenge for "Telecom - Flow". Enter a location and it will make an API call (openweathermap.org) and display the current weather and the most important stats.
 
-## Technology used
-
--   ### React.js
-    -   ###### React Js
-    -   ###### Redux Toolkit
-    -   ###### SaSS
-    -   ###### Axios
-
 ## Installation
 
 ```
@@ -23,7 +15,7 @@ Get Your OpenWeatherMap API KEY here: https://home.openweathermap.org/api_keys
 ⚠️ **Important Instructions** ⚠️:
 
 -   Create `.env` file in root of the project.
--   Copy the variable from [sample.env](https://github.com/fedecanesa/weather-app/blob/main/sample.env) and paste it into `.env`
+-   Copy the variable from [sample.env](https://github.com/fedecanesa/telecom-weather/blob/main/sample.env) and paste it into `.env`
 -   Change the desired value. _eg_ API Key
 -   Run app: `npm start or yarn start`
 
