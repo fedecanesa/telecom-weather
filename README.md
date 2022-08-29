@@ -1,6 +1,6 @@
 ## Description
 
-Challenge for "Telecom - Flow". Enter a location and it will make an API call (openweathermap.org) and display the current weather and the most important stats.
+Challenge for "Telecom - Flow". When entering the application, it identifies the location where you are and shows you the current weather data. In addition, you can select from the five available cities or perform a search for a city that you like.
 
 ## Installation
 
