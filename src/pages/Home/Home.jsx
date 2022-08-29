@@ -55,9 +55,7 @@ const Home = () => {
                     coords: { latitude, longitude },
                 } = position;
                 dispatch(geolocationSuccess({ latitude, longitude }));
-                if (latitude.length > 0 && longitude.length > 0) {
-                    getLocalWeather();
-                }
+                getLocalWeather();
             });
         }
     };
